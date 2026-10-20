@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --color-bg-primary: #090C0A;
+  --color-bg-secondary: #111812;
+  --color-bg-elevated: #172019;
+  --color-accent: #B8FF65;
+  --color-text-primary: #F5F8F4;
+  --color-text-muted: #A6B4A7;
+  --color-border-subtle: #273329;
+}
+
+:root {
+  --bg-main: #090C0A;
+  --bg-secondary: #111812;
+  --bg-elevated: #172019;
+  --accent-green: #B8FF65;
+  --text-main: #F5F8F4;
+  --text-muted: #A6B4A7;
+  --border-color: #273329;
+  color-scheme: dark;
+}
+
+* {
+  border-color: #273329;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #090C0A;
+  color: #F5F8F4;
+}
+
+body {
+  background-color: #090C0A;
+  color: #F5F8F4;
+  font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  selection-background-color: #B8FF65;
+  selection-color: #090C0A;
+}
+
+::selection {
+  background-color: #B8FF65;
+  color: #090C0A;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090C0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #273329;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38493B;
+}
