@@ -32,7 +32,10 @@ describe("Next.js Server Route Handlers (/api/transcriptions & /api/health)", ()
     delete process.env.N8N_RESULT_WEBHOOK_URL;
     delete process.env.N8N_WEBHOOK_SECRET;
 
-    const res = await healthRoute();
+    const req = new NextRequest("http://localhost:3000/api/health", {
+      method: "GET",
+    });
+    const res = await healthRoute(req);
     expect(res.status).toBe(200);
     const body = await res.json();
     expect(body.configured).toBe(false);
